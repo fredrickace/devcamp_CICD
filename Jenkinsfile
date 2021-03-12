@@ -26,7 +26,7 @@ pipeline {
                     docker.withRegistry('', 'docker_pwd')
                     {
 
-                        dockerImage = docker.build("fredrickcyril/devcamper_qa:${env.BUILD_NUMBER}")
+                        dockerImage = docker.build("fredrickcyril/devcamper_testing:${env.BUILD_NUMBER}")
 
                         /* Push the container to the custom Registry */
                         dockerImage.push()
