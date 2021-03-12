@@ -40,9 +40,9 @@ pipeline {
         stage('Remove local images') {
             steps {
 
-                sh "docker rmi fredrickcyril/devcamper_qa:${env.BUILD_NUMBER}"
+                sh "docker rmi fredrickcyril/devcamper_testing:${env.BUILD_NUMBER}"
 
-                sh "docker rmi fredrickcyril/devcamper_qa:latest"
+                sh "docker rmi fredrickcyril/devcamper_testing:latest"
 
             }
         }
