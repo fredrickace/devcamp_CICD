@@ -3,8 +3,9 @@ pipeline {
     environment {
         dockerImage = ''
     }
-    agent any
-   //   label 'docker'
+    agent {
+      label 'docker'
+    }
     
 
     triggers { pollSCM('* * * * *') }
@@ -37,15 +38,15 @@ pipeline {
             }
         }
 
-//        stage('Remove local images') {
-//            steps {
-//
-//                sh "docker rmi fredrickcyril/devcamper_testing:${env.BUILD_NUMBER}"
+        stage('Remove local images') {
+            steps {
 
-//                sh "docker rmi fredrickcyril/devcamper_testing:latest"
+                sh "docker rmi fredrickcyril/devcamper_testing:${env.BUILD_NUMBER}"
 
- //           }
-  //      }
+                sh "docker rmi fredrickcyril/devcamper_testing:latest"
+
+           }
+       }
     }
 
 }
