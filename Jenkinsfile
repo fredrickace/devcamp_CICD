@@ -4,6 +4,7 @@ pipeline {
         dockerImage = ''
     }
     agent {
+        any
    //   label 'docker'
     }
 
