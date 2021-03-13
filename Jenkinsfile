@@ -37,15 +37,15 @@ pipeline {
             }
         }
 
-        stage('Remove local images') {
-            steps {
+//        stage('Remove local images') {
+//            steps {
+//
+//                sh "docker rmi fredrickcyril/devcamper_testing:${env.BUILD_NUMBER}"
 
-                sh "docker rmi fredrickcyril/devcamper_testing:${env.BUILD_NUMBER}"
+//                sh "docker rmi fredrickcyril/devcamper_testing:latest"
 
-                sh "docker rmi fredrickcyril/devcamper_testing:latest"
-
-            }
-        }
+ //           }
+  //      }
     }
 
 }
