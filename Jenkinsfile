@@ -3,10 +3,9 @@ pipeline {
     environment {
         dockerImage = ''
     }
-    agent {
-        any
+    agent any
    //   label 'docker'
-    }
+    
 
     triggers { pollSCM('* * * * *') }
 
